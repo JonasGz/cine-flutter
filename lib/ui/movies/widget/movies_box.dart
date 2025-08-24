@@ -41,6 +41,7 @@ class MoviesBox extends StatelessWidget {
               runAlignment: WrapAlignment.center,
               children: List.generate(movies.length, (index) {
                 return MovieCard(
+                  id: movies[index].id,
                   title: movies[index].title,
                   year: movies[index].releaseDate?.split('-').first ?? '2023',
                   img: movies[index].posterPath ?? '',
@@ -56,6 +57,7 @@ class MoviesBox extends StatelessWidget {
                 return Container(
                   margin: EdgeInsets.only(right: 16, left: 20),
                   child: MovieCard(
+                    id: movies[index].id,
                     title: movies[index].title,
                     year: movies[index].releaseDate?.split('-').first ?? '2023',
                     img: movies[index].posterPath ?? '',

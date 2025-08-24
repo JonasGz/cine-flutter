@@ -1,4 +1,5 @@
 import 'package:cinebox/data/models/genre_response.dart';
+import 'package:cinebox/data/models/movie_detail.dart';
 import 'package:cinebox/data/models/movie_response.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
@@ -50,5 +51,11 @@ abstract class TmdbService {
     @Query('query') required String query,
     @Query('language') String language = 'pt-BR',
     @Query('page') int page = 1,
+  });
+
+  @GET('/movie/{movie_id}')
+  Future<MovieDetail> getMovieDetails({
+    @Path('movie_id') required int movieId,
+    @Query('language') String language = 'pt-BR',
   });
 }

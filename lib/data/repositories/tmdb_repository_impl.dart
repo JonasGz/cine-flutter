@@ -1,5 +1,6 @@
 import 'package:cinebox/core/exceptions/app_exceptions.dart';
-import 'package:cinebox/data/models/genre_response.dart';
+import 'package:cinebox/data/models/genre_item.dart';
+import 'package:cinebox/data/models/movie_detail.dart';
 import 'package:cinebox/data/models/movie_item.dart';
 import 'package:cinebox/data/services/tmdb/tmdb_service.dart';
 import 'package:cinebox/domain/repositories/tmdb_repository.dart';
@@ -101,6 +102,18 @@ class TmdbRepositoryImpl implements TmdbRepository {
       throw _handleDioException(e);
     } catch (e) {
       throw ServerException('Erro ao buscar filmes: $e');
+    }
+  }
+
+  @override
+  Future<MovieDetail> getMovieDetails(int movieId) async {
+    try {
+      final response = await _tmdbService.getMovieDetails(movieId: movieId);
+      return response;
+    } on DioException catch (e) {
+      throw _handleDioException(e);
+    } catch (e) {
+      throw ServerException('Erro ao buscar detalhes do filme: $e');
     }
   }
 

@@ -1,9 +1,11 @@
 import 'package:cinebox/data/core/rest_client/tmdb_rest_client_provider.dart';
-import 'package:cinebox/data/models/genre_response.dart';
+import 'package:cinebox/data/models/genre_item.dart';
+import 'package:cinebox/data/models/movie_detail.dart';
 import 'package:cinebox/data/models/movie_item.dart';
 import 'package:cinebox/data/repositories/tmdb_repository_impl.dart';
 import 'package:cinebox/data/services/tmdb/tmdb_service.dart';
 import 'package:cinebox/domain/repositories/tmdb_repository.dart';
+import 'package:cinebox/domain/usecases/get_movie_detail_usecase.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 
@@ -51,4 +53,17 @@ final searchQueryProvider = StateProvider<String>((ref) => '');
 final moviesProvider = FutureProvider<List<MovieItem>>((ref) {
   final tmdbRepository = ref.watch(tmdbRepositoryProvider);
   return tmdbRepository.getAllMovies();
+});
+
+final getMovieDetailUsecaseProvider = Provider<GetMovieDetailUsecase>((ref) {
+  final tmdbRepository = ref.watch(tmdbRepositoryProvider);
+  return GetMovieDetailUsecase(tmdbRepository);
+});
+
+final movieDetailProvider = FutureProvider.family<MovieDetail, int>((
+  ref,
+  movieId,
+) {
+  final getMovieDetailUsecase = ref.read(getMovieDetailUsecaseProvider);
+  return getMovieDetailUsecase(movieId);
 });
