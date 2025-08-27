@@ -27,8 +27,7 @@ Dio
 Riverpod
  – Gerenciamento de estado.
 
- Firebase
- - Google Auth.
+ Firebase - Google Auth.
 
 TMDB API – Fonte de dados para filmes e gêneros.
 
