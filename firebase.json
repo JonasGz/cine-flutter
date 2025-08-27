@@ -1,0 +1,21 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "cine-flutterr",
+          "appId": "1:718073741375:android:a4dec57f1a986b3081b88a",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "cine-flutterr",
+          "configurations": {
+            "android": "1:718073741375:android:a4dec57f1a986b3081b88a"
+          }
+        }
+      }
+    }
+  }
+}

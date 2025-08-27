@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "718073741375",
+    "project_id": "cine-flutterr",
+    "storage_bucket": "cine-flutterr.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718073741375:android:a4dec57f1a986b3081b88a",
+        "android_client_info": {
+          "package_name": "br.com.cineboxjonas.cinebox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718073741375-kagpoihidseev3via2v2mt27cc64j70d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.cineboxjonas.cinebox",
+            "certificate_hash": "28a6d97bb089a454cff89696b05de13015610622"
+          }
+        },
+        {
+          "client_id": "718073741375-ue7a3uutk6u82tbtpfbuhsigu1kn313m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8NXGsGkoIhMO9DEI1CDeBLGPShna8-YY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718073741375-ue7a3uutk6u82tbtpfbuhsigu1kn313m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

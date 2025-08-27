@@ -1,4 +1,5 @@
 import 'package:cinebox/ui/core/themes/resource.dart';
+import 'package:cinebox/ui/core/themes/text_styles.dart';
 import 'package:cinebox/ui/core/widgets/loader_messages.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -28,7 +29,21 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
             color: Colors.black.withAlpha(170),
           ),
           Center(
-            child: Image.asset(R.ASSETS_IMAGES_LOGO_PNG),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              spacing: 20,
+              children: [
+                Image.asset(R.ASSETS_IMAGES_LOGO_PNG),
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  label: const Text(
+                    'Sign in with Google',
+                    style: AppTextStyles.regularSmall,
+                  ),
+                  icon: Image.asset(R.ASSETS_IMAGES_GOOGLE_LOGO_PNG),
+                ),
+              ],
+            ),
           ),
         ],
       ),
