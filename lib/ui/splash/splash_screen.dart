@@ -1,3 +1,4 @@
+import 'package:cinebox/data/core/providers/auth_providers.dart';
 import 'package:cinebox/ui/core/themes/resource.dart';
 import 'package:cinebox/ui/core/themes/text_styles.dart';
 import 'package:cinebox/ui/core/widgets/loader_messages.dart';
@@ -35,7 +36,19 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
               children: [
                 Image.asset(R.ASSETS_IMAGES_LOGO_PNG),
                 ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () async {
+                    final repo = ref.read(authRepositoryProvider);
+                    final navigator = Navigator.of(context);
+                    final scaffoldMessenger = ScaffoldMessenger.of(context);
+                    try {
+                      await repo.signInWithGoogle();
+                      navigator.pushNamed('/home');
+                    } catch (e) {
+                      scaffoldMessenger.showSnackBar(
+                        SnackBar(content: Text('Erro no login: $e')),
+                      );
+                    }
+                  },
                   label: const Text(
                     'Sign in with Google',
                     style: AppTextStyles.regularSmall,

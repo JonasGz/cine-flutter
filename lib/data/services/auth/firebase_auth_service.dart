@@ -16,7 +16,7 @@ class FirebaseAuthService {
     }
   }
 
-  static Future<UserCredential?> signInWithGoogle() async {
+  Future<UserCredential> signInWithGoogle() async {
     try {
       await initSignIn();
       final GoogleSignInAccount googleUser = await _googleSignIn.authenticate();

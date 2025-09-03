@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:cinebox/data/core/providers/movies_providers.dart';
 import 'package:cinebox/ui/core/themes/resource.dart';
 import 'package:flutter/material.dart';
@@ -38,7 +37,7 @@ class _MoviesAppBarState extends ConsumerState<MoviesAppBar> {
         ),
       ),
       bottom: PreferredSize(
-        preferredSize: const Size.fromHeight(56), // altura do campo
+        preferredSize: const Size.fromHeight(56),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
           child: SizedBox(

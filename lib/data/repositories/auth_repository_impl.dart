@@ -1,12 +1,14 @@
 import 'package:cinebox/data/services/auth/firebase_auth_service.dart';
+import 'package:cinebox/domain/repositories/auth_repository.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
-class AuthRepositoryImpl {
+class AuthRepositoryImpl implements AuthRepository {
   final FirebaseAuthService _firebaseAuthService;
 
   AuthRepositoryImpl(this._firebaseAuthService);
 
-  Future<User> signInWithGoogle() async {
+  @override
+  Future<UserCredential> signInWithGoogle() async {
     try {
       return await _firebaseAuthService.signInWithGoogle();
     } catch (e) {
