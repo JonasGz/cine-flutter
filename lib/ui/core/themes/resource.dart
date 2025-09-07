@@ -4,6 +4,15 @@
 class R {
   const R._();
 
+  /// ![preview](file:///Users/jonaschagas/projects/cinebox-flutter/assets/images/bg_home.png)
+  static const String BG_HOME = 'assets/images/bg_home.png';
+
+  /// ![preview](file:///Users/jonaschagas/projects/cinebox-flutter/assets/images/logo_splash.png)
+  static const String LOGO_SPLASH = 'assets/images/logo_splash.png';
+
+  /// ![preview](file:///Users/jonaschagas/projects/cinebox-flutter/assets/images/bg_filmes_splash.jpg)
+  static const String BG_FILMES_SPLASH = 'assets/images/bg_filmes_splash.jpg';
+
   /// ![preview](file:///Users/jonaschagas/projects/cinebox-flutter/assets/images/bg_login.png)
   static const String ASSETS_IMAGES_BG_LOGIN_PNG = 'assets/images/bg_login.png';
 

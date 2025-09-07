@@ -20,7 +20,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
       body: Stack(
         children: [
           Image.asset(
-            R.ASSETS_IMAGES_BG_LOGIN_PNG,
+            R.BG_FILMES_SPLASH,
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,
@@ -34,7 +34,10 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
               mainAxisAlignment: MainAxisAlignment.center,
               spacing: 20,
               children: [
-                Image.asset(R.ASSETS_IMAGES_LOGO_PNG),
+                Image.asset(
+                  R.LOGO_SPLASH,
+                  width: 240,
+                ),
                 ElevatedButton.icon(
                   onPressed: () async {
                     final repo = ref.read(authRepositoryProvider);

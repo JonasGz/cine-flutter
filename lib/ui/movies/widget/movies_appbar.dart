@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:cinebox/data/core/providers/movies_providers.dart';
 import 'package:cinebox/ui/core/themes/resource.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class _MoviesAppBarState extends ConsumerState<MoviesAppBar> {
       pinned: true,
       flexibleSpace: FlexibleSpaceBar(
         background: Image.asset(
-          R.ASSETS_IMAGES_SMALL_BANNER_PNG,
+          R.BG_HOME,
           fit: BoxFit.cover,
         ),
       ),
